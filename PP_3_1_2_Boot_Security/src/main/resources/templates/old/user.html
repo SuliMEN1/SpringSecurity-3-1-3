@@ -31,9 +31,9 @@
 
 
 
-<!--         <strong><a th:text="${user.getUsername()}"></a></strong>-->
+         <strong><a th:text="${user.getUsername()}"></a></strong>
         <span class="text-start">с ролью:
-<!--            <a th:each="role : ${user.getAuthorities()}" th:text="${role.authority} + ' '"></a>-->
+            <a th:each="role : ${user.getAuthorities()}" th:text="${role.authority} + ' '"></a>
         </span>
     </span>
     <ul class="navbar-nav px-4">
@@ -68,7 +68,7 @@
         <div>
             <p><strong>О пользователе</strong></p>
             <div class="table-responsive">
-                <table class="table table-striped table-hover" id="mainUser">
+                <table class="table table-striped table-hover">
                     <thead>
                     <tr>
                         <th scope="col">ID</th>
@@ -80,13 +80,13 @@
                     </tr>
                     </thead>
                     <tbody>
-<!--                    <tr>-->
-<!--                        <td th:text="${userModel.getId()}"></td>-->
-<!--                        <td th:text="${userModel.getName()}"></td>-->
-<!--                        <td th:text="${userModel.getLastName()}"></td>-->
-<!--                        <td th:text="${userModel.getAge()}"></td>-->
-<!--                        <td th:text="${userModel.getEmail()}"></td>-->
-<!--                        <td><span th:each="role : ${userModel.getRoles()}" th:text="${role.authority} + ' '"></span></td>-->
+                    <tr>
+                        <td th:text="${userModel.getId()}"></td>
+                        <td th:text="${userModel.getName()}"></td>
+                        <td th:text="${userModel.getLastName()}"></td>
+                        <td th:text="${userModel.getAge()}"></td>
+                        <td th:text="${userModel.getEmail()}"></td>
+                        <td><span th:each="role : ${userModel.getRoles()}" th:text="${role.authority} + ' '"></span></td>
                     </tr>
                     </tbody>
                 </table>
@@ -95,10 +95,5 @@
     </div>
 </div>
 </div>
-
-<script src="webjars/jquery/3.5.1/jquery.js"></script>
-<script src="webjars/popper.js/1.16.0/umd/popper.js"></script>
-<script src="webjars/bootstrap/4.5.3/js/bootstrap.min.js"></script>
-<script src="/js/user.js"></script>
 </body>
 </html>

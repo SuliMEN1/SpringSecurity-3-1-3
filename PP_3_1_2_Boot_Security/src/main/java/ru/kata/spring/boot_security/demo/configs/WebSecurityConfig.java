@@ -34,7 +34,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                     .anyRequest().authenticated()
                 .and()
                     .formLogin()
-                    .loginPage("/login")
+//                    .loginPage("/login")
                     .usernameParameter("email")
                     .passwordParameter("password")
                     .loginProcessingUrl("/enter_login")
@@ -44,7 +44,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                     .logout()
                     .permitAll()
                     .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                    .logoutSuccessUrl("/login?logout");
+                    .logoutSuccessUrl("/login");
     }
     @Bean
     public UserDetailsServiceImpl userDetailsService() {
