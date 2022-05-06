@@ -44,7 +44,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                     .logout()
                     .permitAll()
                     .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                    .logoutSuccessUrl("/login?logout");
+                    .logoutSuccessUrl("/login?logout")
+                .and().csrf().disable();
     }
     @Bean
     public UserDetailsServiceImpl userDetailsService() {
