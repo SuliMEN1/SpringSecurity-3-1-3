@@ -18,7 +18,7 @@ public class UserRestController {
         this.userDetailsService = userDetailsService;
 
     }
-    @GetMapping
+    @GetMapping("/user")
     public ResponseEntity<User> apiGetUser() {
         User user = userDetailsService.get(userDetailsService.getCurrentUsername());
         return new ResponseEntity<>(user, HttpStatus.OK);

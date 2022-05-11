@@ -8,7 +8,7 @@ const userService = {
         'Content-Type': 'application/json',
         'Referer': null
     },
-    getUser: async () => await fetch('api')
+    getUser: async () => await fetch('api/user')
 }
 
 async function getUserTable() {
@@ -48,3 +48,4 @@ async function getUserTable() {
 
         })
 }
+
